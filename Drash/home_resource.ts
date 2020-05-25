@@ -12,4 +12,14 @@ export default class MyResource extends Drash.Http.Resource{
         this.response.body = "This is a POST request!";
         return this.response;
     }
+
+    public PUT(){
+        this.response.body = "This is a PUT request!";
+        return this.response;
+    }
+
+    public DELETE(){
+        this.response.body = "This is a DELETE request!";
+        return this.response;
+    }
 }
