@@ -6,7 +6,10 @@ const hostname = 'localhost';
 const port = 1337;
 
 const server = new Drash.Http.Server({
+    directory: "/DenoWeb/Drash",
     resources: [HomeResource, UsersResource],
+    response_output: "text/html",
+    static_paths: ["/public"]
 });
 
 server.run({

@@ -4,7 +4,17 @@ export default class MyResource extends Drash.Http.Resource{
     static paths = ["/"];
 
     public GET(){
-        this.response.body = "This is a GET request!";
+        this.response.body = `
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Drash</title>
+            <link href="/public/style.css" rel="stylesheet">
+          </head>
+          <body>
+            <h1 class="my-text">This is my title and it is red.</h1>
+          </body>
+        </html>`;
         return this.response;
     }
 
